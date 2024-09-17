@@ -33,5 +33,7 @@ const Topbar = () => {
                 <Button>Login / Sign up</Button>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default Topbar;
