@@ -20,7 +20,7 @@ const Topbar = () => {
     return (
         <div className={styles.topbar}>
             <div className={styles.leftside}>
-            <LuBoxes />
+            <LuBoxes className="topbarIcon" />
                 <nav className={styles.navigation}>
                 {links.map((link) => (
                     <a key={link.label} href={link.href} className={styles.link}>
