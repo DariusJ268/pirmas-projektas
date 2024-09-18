@@ -1,39 +1,45 @@
+import { useNavigate, Link } from "react-router-dom";
+import { ROUTES } from "../../router/consts";
 import Button from "../common/Button";
 import styles from "./Topbar.module.scss";
 import { LuBoxes } from "react-icons/lu";
 
 const Topbar = () => {
-    const links = [
-      {
-        href: "#",
-        label: "Home",
-      },
-      {
-        href: "#",
-        label: "Services",
-      },
-      {
-        href: "#",
-        label: "About Us",
-      },
-    ];
-    return (
-        <div className={styles.topbar}>
-            <div className={styles.leftside}>
-            < LuBoxes fontSize={50} />
-                <nav className={styles.navigation}>
-                {links.map((link) => (
-                    <a key={link.label} href={link.href} className={styles.link}>
-                        {link.label}
-                    </a>
-                ))}
-                </nav>
-            </div>
-            <div className={styles.rightSide}>
-                <Button>Login / Sign up</Button>
-            </div>
-        </div>
-    );
+  const navigate = useNavigate();
+
+  const links = [
+    {
+      href: ROUTES.HOME,
+      label: "Home",
+    },
+    {
+      href: ROUTES.SERVICES,
+      label: "Services",
+    },
+    {
+      href: ROUTES.ABOUT_US,
+      label: "About Us",
+    },
+  ];
+  return (
+    <header className={styles.topbar}>
+      <div className={styles.leftSide}>
+        <Link to={ROUTES.HOME}>
+         < LuBoxes fontSize={50} />
+        </Link>
+        <nav className={styles.navigation}>
+          {links.map((link) => (
+            <Link key={link.label} to={link.href} className={styles.link}>
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+      <div className={styles.rightSide}>
+        <Button onClick={() => navigate(ROUTES.LOGIN)}>Login / Sign Up</Button>
+      </div>
+    </header>
+  );
 };
 
 export default Topbar;
