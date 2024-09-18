@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import styles from "./Button.module.scss";
 import classNames from "classnames";
 
-const Button =({className, rounded, ...props}) => {
+const Button = ({ className, rounded, ...props }) => {
     return (
-        <button
+        <button onClick={() => alert("Wait a bit")}
             className={classNames(
                 styles.button,
                 rounded && styles.rounded,
