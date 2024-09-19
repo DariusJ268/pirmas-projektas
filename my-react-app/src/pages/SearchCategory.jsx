@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 
 const SearchCategory = () => {
-  const { category } = useParams();
+    const { category } = useParams();
 
-  return <div>It's {category}</div>;
+    return <div>It's {category}</div>;
 };
 
 export default SearchCategory;

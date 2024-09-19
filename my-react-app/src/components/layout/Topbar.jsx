@@ -25,7 +25,8 @@ const Topbar = () => {
     <header className={styles.topbar}>
       <div className={styles.leftSide}>
         <Link to={ROUTES.HOME}>
-         < LuBoxes fontSize={50} />
+          < LuBoxes fontSize={50} />
+          <span style={{ marginLeft: "10px", fontSize: "20px" }}>Logoipsum Home Services</span>
         </Link>
         <nav className={styles.navigation}>
           {links.map((link) => (
