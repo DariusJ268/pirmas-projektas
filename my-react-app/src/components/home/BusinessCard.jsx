@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Button from "../common/Button";
 import styles from "./BusinessCard.module.scss";
 import useLocalStorage from "@/hooks/useLocalStorage";
