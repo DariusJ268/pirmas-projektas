@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 const Button = ({ className, rounded, small, large, ...props }) => {
     return (
-        <button onClick={() => alert("Wait a bit")}
+        <button
             className={classNames(
                 styles.button,
                 rounded && styles.rounded,
