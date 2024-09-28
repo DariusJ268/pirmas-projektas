@@ -8,7 +8,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Login from "./pages/Login";
 import SearchCategory from "./pages/SearchCategory";
 import AuthLayout from "./components/layout/AuthLayout";
-// import Register from "./pages/Register";
+import Register from "./pages/Register";
 import { UserProvider } from "@/hooks/usedContext";
 
 const router = createBrowserRouter([
@@ -46,10 +46,10 @@ const router = createBrowserRouter([
         path: ROUTES.LOGIN,
         element: <Login />,
       },
-      // {
-      //   path: ROUTES.REGISTER,
-      //   element: <Register />,
-      // },
+      {
+        path: ROUTES.REGISTER,
+        element: <Register />,
+      },
     ],
   },
 ]);

@@ -1,10 +1,10 @@
 import Input from "@/components/common/Input";
 import styles from "./Login.module.scss";
 import Button from "@/components/common/Button";
-import {Link, useNavigate} from "react-router-dom";
-import {ROUTES} from "@/router/consts";
-import {useContext, useState} from "react";
-import {usedContext} from "@/hooks/usedContext"
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTES } from "@/router/consts";
+import { useContext, useState } from "react";
+import { usedContext } from "@/hooks/usedContext"
 
 const Login = () => {
   const { login } = useContext(usedContext);
@@ -38,7 +38,9 @@ const Login = () => {
           required
           className={styles.input}
         />
-        <Button type="submit">Log in</Button>
+        <div>
+          <Button type="submit">Log in</Button>
+        </div>
         <div className={styles.link}>
           <Link to={ROUTES.REGISTER} className={styles.signUp}>
             Don't have an account? Sign up
@@ -48,5 +50,5 @@ const Login = () => {
     </div>
   );
 };
-  
+
 export default Login;

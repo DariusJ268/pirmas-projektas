@@ -9,8 +9,12 @@ const UserProvider = ({ children }) => {
   const login = (user) => setUser(user);
   const logout = () => setUser(null);
 
+  const register = (userData) => {
+    setUser(userData);
+  };
+  
   return (
-    <usedContext.Provider value={{ user, login, logout }}>
+    <usedContext.Provider value={{ user, login, logout, register }}>
       {children}
     </usedContext.Provider>
   );
