@@ -3,8 +3,12 @@ import { ROUTES } from "../../router/consts";
 import Button from "../common/Button";
 import styles from "./Topbar.module.scss";
 import { LuBoxes } from "react-icons/lu";
+import { useContext } from "react";
+import { usedContext } from "@/hooks/usedContext";
+import Loged from "../common/Loged";
 
 const Topbar = () => {
+  const { user } = useContext(usedContext);
   const navigate = useNavigate();
 
   const links = [
@@ -37,7 +41,11 @@ const Topbar = () => {
         </nav>
       </div>
       <div className={styles.rightSide}>
-        <Button onClick={() => navigate(ROUTES.LOGIN)}>Login / Sign Up</Button>
+        {user ? (
+          <Loged>{user.email[0]}</Loged>
+        ) : (
+          <Button onClick={() => navigate(ROUTES.LOGIN)}>Login / Sign Up</Button>
+        )}
       </div>
     </header>
   );
