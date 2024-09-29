@@ -22,3 +22,19 @@
     display: flex;
     gap: 1.5rem;
   }
+
+  .rightSide {
+    display: flex;
+    align-items: center;
+  }
+  
+  .userSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logout {
+    background-color: red;
+    color: white;
+  }

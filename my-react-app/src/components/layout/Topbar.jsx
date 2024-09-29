@@ -6,10 +6,16 @@ import { LuBoxes } from "react-icons/lu";
 import { useContext } from "react";
 import { usedContext } from "@/hooks/usedContext";
 import Loged from "../common/Loged";
+import Logout from "../common/Logout";
 
 const Topbar = () => {
   const { user } = useContext(usedContext);
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate(ROUTES.HOME);
+  };
 
   const links = [
     {
@@ -42,7 +48,12 @@ const Topbar = () => {
       </div>
       <div className={styles.rightSide}>
         {user ? (
-          <Loged>{user.email[0]}</Loged>
+          <div className={styles.userSection}>
+            <Loged>{user.email[0]}</Loged>
+            <Logout className={styles.logout}>
+              Log Out
+            </Logout>
+          </div>
         ) : (
           <Button onClick={() => navigate(ROUTES.LOGIN)}>Login / Sign Up</Button>
         )}

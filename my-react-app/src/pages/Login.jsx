@@ -38,7 +38,7 @@ const Login = () => {
           required
           className={styles.input}
         />
-        <div>
+        <div className={styles.buttonContainer}>
           <Button type="submit">Log in</Button>
         </div>
         <div className={styles.link}>
