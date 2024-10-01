@@ -1,7 +1,7 @@
 import Input from "@/components/common/Input";
 import styles from "./Register.module.scss";
 import Button from "@/components/common/Button";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ROUTES } from "@/router/consts";
 import { useContext, useState } from "react";
 import { usedContext } from "@/hooks/usedContext";
@@ -60,7 +60,14 @@ const Register = () => {
         {!passwordsMatch && (
           <p className={styles.error}>Passwords do not match</p>
         )}
+        <div className={styles.buttonContainer}>
         <Button type="submit" disabled={!passwordsMatch}>Register</Button>
+        </div>
+        <div className={styles.link}>
+          <Link to={ROUTES.LOGIN} className={styles.signUp}>
+            Already have an account? Log in
+          </Link>
+        </div>
       </form>
     </div>
   );
