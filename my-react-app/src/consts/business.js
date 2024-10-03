@@ -54,4 +54,17 @@ export const businesses = [
         },
       ],
     },
+    {
+      _id: "663ea59ed296417abaedfdfc",
+      name: "Miesto santechnika",
+      address: "Žvejų g. 8, Vilnius",
+      category: "plumbing",
+      contactPerson: "Petras Kazlauskas",
+      email: "pipes@gmail.com",
+      images: [
+        {
+          url: "https://www.aztecplumbing.net/wp-content/uploads/2024/01/Screenshot_15.2207270859296.png",
+        },
+      ],
+    },
   ];

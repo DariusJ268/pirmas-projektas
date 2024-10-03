@@ -1,20 +1,7 @@
 import Button from "../common/Button";
 import styles from "./BusinessCard.module.scss";
-import useLocalStorage from "@/hooks/useLocalStorage";
 
-const BusinessCard = ({ business }) => {
-
-    const [favorites, setFavorites] = useLocalStorage("favorites", []);
-
-    const isFavorite = favorites.includes(business.name);
-
-    const toggleFavorite = () => {
-        if (isFavorite) {
-            setFavorites(favorites.filter((fav) => fav !== business.name));
-        } else {
-            setFavorites([...favorites, business.name]);
-        }
-    };
+const BusinessCard = ({ business, isFavorite, toggleFavorite }) => {
 
     return (
         <div className={styles.card}>

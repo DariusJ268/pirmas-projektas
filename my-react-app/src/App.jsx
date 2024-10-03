@@ -28,10 +28,6 @@ const router = createBrowserRouter([
         path: ROUTES.ABOUT_US,
         element: <AboutUs />,
       },
-      // {
-      //   path: ROUTES.LOGIN,
-      //   element: <Login />,
-      // },
       {
         path: ROUTES.SEARCH_CATEGORY,
         element: <SearchCategory />,
